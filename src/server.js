@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import connectDB from "./db/index.js";
 dotenv.config(); 
 
-// const app = express();
+const app = express();
 
 connectDB()
 .then(() => {
@@ -13,7 +13,7 @@ connectDB()
     })
 })
 .catch((err) => {
-    console.log("Mongo db connection failed")
+    console.log(`Mongo db connection failed, ${err}`)
 })
 
 // (async () => {
